@@ -35,29 +35,29 @@
         android:orientation="vertical"
         android:layout_height="50dp">
         <LinearLayout
-            android:padding="5dp"
+            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
 
             <TextView
-                android:textColor="#979797"
+                android:textColor="#262626"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bmdohyeon"
                 android:text="장바구니"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
             <ImageView
                 android:src="@drawable/spliter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
-                android:textColor="#262626"
+                android:textColor="#979797"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bmdohyeon"
                 android:text="냉장고"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
             <ImageView
                 android:src="@drawable/spliter"
                 android:layout_width="wrap_content"
@@ -68,12 +68,11 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bmdohyeon"
                 android:text="레시피"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
 
         </LinearLayout>
         <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="80dp"
             android:layout_width="80dp"
             android:layout_height="5dp"
             android:background="#79d9cf"></LinearLayout>
@@ -84,174 +83,116 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_weight="1">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp">
-
-            <TextView
-                android:layout_alignParentLeft="true"
-                android:textColor="#979797"
-                android:textSize="25sp"
-                android:fontFamily="@font/bmhannapro"
-                android:text="냉장실"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <ImageView
-                android:layout_marginTop="10dp"
-                android:layout_alignParentRight="true"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/folder_open"/>
-
-        </RelativeLayout>
-
         <LinearLayout
-            android:padding="10dp"
             android:orientation="horizontal"
+            android:padding="10dp"
             android:layout_width="match_parent"
-            android:layout_height="110dp">
+            android:layout_height="90dp">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ciercle_question"/>
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/black"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="마늘"
+                android:textSize="35sp"
+                android:fontFamily="@font/bmhannapro"/>
+            <TextView
+                android:fontFamily="@font/bmhannapro"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2개"/>
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ciercle_question"
+                android:layout_width="25dp"
+                android:layout_height="25dp"/>
 
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:layout_width="60dp"
-                android:layout_height="80dp"
-                android:orientation="vertical"
-                android:layout_gravity="center_horizontal">
 
-                <ImageView
-                    android:src="@drawable/ciercle_question"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"/>
-
-                <TextView
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/bmhannaair"
-                    android:text="이름"
-                    android:textSize="15sp"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:layout_width="60dp"
-                android:layout_height="80dp"
-                android:orientation="vertical"
-                android:layout_gravity="center_horizontal">
-
-                <ImageView
-                    android:src="@drawable/ciercle_question"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"/>
-
-                <TextView
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/bmhannaair"
-                    android:text="이름"
-                    android:textSize="15sp"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:layout_width="60dp"
-                android:layout_height="80dp"
-                android:orientation="vertical"
-                android:layout_gravity="center_horizontal">
-
-                <ImageView
-                    android:src="@drawable/ciercle_question"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"/>
-
-                <TextView
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/bmhannaair"
-                    android:text="이름"
-                    android:textSize="15sp"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:layout_width="60dp"
-                android:layout_height="80dp"
-                android:orientation="vertical"
-                android:layout_gravity="center_horizontal">
-
-                <ImageView
-                    android:src="@drawable/ciercle_question"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"/>
-
-                <TextView
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/bmhannaair"
-                    android:text="이름"
-                    android:textSize="15sp"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:layout_width="60dp"
-                android:layout_height="80dp"
-                android:orientation="vertical"
-                android:layout_gravity="center_horizontal">
-
-                <ImageView
-                    android:src="@drawable/ciercle_question"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"/>
-
-                <TextView
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/bmhannaair"
-                    android:text="이름"
-                    android:textSize="15sp"/>
-
-            </LinearLayout>
 
         </LinearLayout>
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:layout_height="60dp">
 
-            <TextView
-                android:layout_alignParentLeft="true"
-                android:textColor="#979797"
-                android:textSize="25sp"
-                android:fontFamily="@font/bmhannapro"
-                android:text="냉동실"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
             <ImageView
-                android:layout_marginTop="10dp"
-                android:layout_alignParentRight="true"
+                android:layout_marginLeft="30dp"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/folder_close"/>
+                android:src="@drawable/sub_arrow"/>
+            <TextView
+                android:textColor="@color/darkGrey"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="깐마늘!!"
+                android:textSize="30sp"
+                android:fontFamily="@font/bmhannaair"/>
 
-        </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ciercle_question"/>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="돼지고기"
+                android:textSize="35sp"
+                android:fontFamily="@font/bmhannapro"/>
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/bmhannapro"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1Kg"/>
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ciercle_question"
+                android:layout_width="25dp"
+                android:layout_height="25dp"/>
+
+        </LinearLayout>
+
     </LinearLayout>
-
     <LinearLayout
-        android:background="#F2F2F2"
-        android:layout_gravity="right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:padding="10dp"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
         <ImageView
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/delete_forever"
+            android:layout_gravity="center_vertical"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+        <ImageView
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/add_lib"
+            android:layout_gravity="center_vertical"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+        <ImageView
+            android:src="@drawable/add_circle"
+            android:layout_gravity="center_vertical"
             android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:src="@drawable/add_circle"/>
+            android:layout_height="75dp"/>
 
 
     </LinearLayout>
+
 </LinearLayout>
