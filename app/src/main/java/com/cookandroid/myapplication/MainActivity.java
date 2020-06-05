@@ -5,16 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -31,10 +26,8 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerInd
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.LinePagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.ColorTransitionPagerTitleView;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.CommonPagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.SimplePagerTitleView;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -44,9 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-    final List<String> mTitleDataList = new ArrayList<String>();
     NewPagerAdapter newPagerAdapter;
-    View l;
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
@@ -65,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        newPagerAdapter =  new NewPagerAdapter(getSupportFragmentManager());
+        newPagerAdapter =  new NewPagerAdapter(getSupportFragmentManager(), mDataList);
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
         drawerLayout = (DrawerLayout) findViewById(R.id.draw_layout);
 
@@ -107,11 +98,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-        mViewPager = (ViewPager) findViewById(R.id.view_pager);
-        mViewPager.setAdapter(newPagerAdapter);
-        mViewPager.setCurrentItem(1);
         for (int i=0;i<mDataList.size();i++){
             switch (i){
                 case 0:
@@ -127,6 +113,10 @@ public class MainActivity extends AppCompatActivity {
         }
         newPagerAdapter.notifyDataSetChanged();
 
+
+        mViewPager = (ViewPager) findViewById(R.id.view_pager);
+        mViewPager.setAdapter(newPagerAdapter);
+
         MagicIndicator magicIndicator = (MagicIndicator) findViewById(R.id.magic_indicator);
         CommonNavigator commonNavigator = new CommonNavigator(this);
         commonNavigator.setAdapter(new CommonNavigatorAdapter() {
@@ -139,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
             public IPagerTitleView getTitleView(Context context, final int index) {
                 SimplePagerTitleView simplePagerTitleView = new ColorTransitionPagerTitleView(context);
                 simplePagerTitleView.setText(mDataList.get(index));
-                simplePagerTitleView.setNormalColor(Color.parseColor("#595959"));
+                simplePagerTitleView.setNormalColor(Color.parseColor("#979797"));
                 simplePagerTitleView.setSelectedColor(Color.BLACK);
                 simplePagerTitleView.setTextSize(18);
                 simplePagerTitleView.setOnClickListener(new View.OnClickListener() {
@@ -164,11 +154,11 @@ public class MainActivity extends AppCompatActivity {
         magicIndicator.setNavigator(commonNavigator);
         LinearLayout titleContainer = commonNavigator.getTitleContainer(); // must after setNavigator
 
-
         titleContainer.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
         titleContainer.setDividerPadding(UIUtil.dip2px(this, 15));
         titleContainer.setDividerDrawable(getResources().getDrawable(R.drawable.simple_spliter));
         ViewPagerHelper.bind(magicIndicator, mViewPager);
+        mViewPager.setCurrentItem(1);
 
 
 
