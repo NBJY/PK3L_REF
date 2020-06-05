@@ -1,441 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
-
     <LinearLayout
-        android:background="#0F4C81"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="60dp">
-        <ImageView
-            android:layout_gravity="center_vertical"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/menu"/>
-        <TextView
-            android:layout_marginLeft="30dp"
-            android:layout_gravity="center_vertical"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:textSize="35sp"
-            android:text="냉장고를 비워줘!"
-            android:textColor="#79d9cf"
-            android:fontFamily="@font/bmeuljiro"/>
-    </LinearLayout>
-    <LinearLayout
-        android:background="#F2F2F2"
-        android:layout_width="match_parent"
+        android:background="@color/backgroundWhite"
         android:orientation="vertical"
-        android:layout_height="50dp">
-        <LinearLayout
-            android:padding="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
-
+        android:layout_width="330dp"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@color/skyBlue"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
             <TextView
-                android:textColor="@color/lightGrey"
+                android:fontFamily="@font/bmeuljiro"
+                android:layout_margin="20dp"
+                android:layout_alignParentBottom="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/bmdohyeon"
-                android:text="장바구니"
-                android:textSize="20sp"/>
-            <ImageView
-                android:src="@drawable/spliter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:textColor="@color/lightGrey"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bmdohyeon"
-                android:text="냉장고"
-                android:textSize="20sp"/>
-            <ImageView
-                android:src="@drawable/spliter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bmdohyeon"
-                android:text="레시피"
-                android:textSize="20sp"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginLeft="260dp"
-            android:layout_width="80dp"
-            android:layout_height="5dp"
-            android:background="#79d9cf"></LinearLayout>
-    </LinearLayout>
-    <ScrollView
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:background="#F2F2F2"
+                android:text="냉장고를 비워줘!"
+                android:textColor="@color/backgroundWhite"
+                android:textSize="25sp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_alignParentLeft="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/star_fill"/>
+            <TextView
+                android:layout_toRightOf="@+id/icon1"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/bmhannapro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="즐겨 찾는 레시피"
+                android:textColor="@color/black"
+                android:textSize="25sp"/>
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-            <LinearLayout
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
-
-                <EditText
-                    android:paddingLeft="10dp"
-                    android:background="@drawable/stroke"
-                    android:fontFamily="@font/bmhannapro"
-                    android:hint="검색어를 입력해주세요"
-                    android:layout_weight="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
                 <ImageView
-                    android:layout_margin="5dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/search"/>
-
-            </LinearLayout>
-            <TextView
-                android:fontFamily="@font/bmdohyeon"
-                android:textColor="@color/black"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:text="추천 레시피 목록"/>
-            <LinearLayout
-                android:layout_marginLeft="20dp"
-                android:layout_gravity="top"
-                android:background="@color/skyBlue"
-                android:layout_width="match_parent"
-                android:layout_height="3dp">
-
-            </LinearLayout>
-            <FrameLayout
-                android:layout_margin="20dp"
-                android:background="@drawable/salmon"
-                android:layout_width="match_parent"
-                android:layout_height="150dp">
-                <LinearLayout
-                    android:padding="5dp"
-                    android:layout_margin="20dp"
-                    android:background="#4dF2F2F2"
-                    android:layout_gravity="bottom"
-                    android:layout_width="match_parent"
+                    android:id="@+id/icon2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/access_time"/>
+                <TextView
+                    android:layout_toRightOf="@+id/icon2"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/bmhannapro"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/bmhannapro"
-                        android:layout_marginLeft="20dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:textSize="25sp"
-                        android:text="연어 스테이크"/>
-                    <TextView
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/bmhannaair"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="40dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:text="맛있겠다"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_gravity="right|bottom"
+                    android:text="최근 본 레시피"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"/>
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/send"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/circle"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/circle"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/circle"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/circle"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/circle"/>
-                </LinearLayout>
-            </FrameLayout>
-            <TextView
-                android:fontFamily="@font/bmdohyeon"
-                android:textColor="@color/black"
-                android:padding="10dp"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="다른 추천 레시피"/>
-            <LinearLayout
-                android:layout_marginLeft="20dp"
-                android:layout_gravity="top"
-                android:background="@color/skyBlue"
-                android:layout_width="match_parent"
-                android:layout_height="3dp">
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
                 android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_margin="20dp"
-                    android:orientation="vertical"
+                <ImageView
+                    android:id="@+id/icon3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/setting"/>
+                <TextView
+                    android:layout_toRightOf="@+id/icon3"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/bmhannapro"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:background="@color/lightGrey"
-                        android:src="@drawable/pancakes"
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"/>
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_margin="5dp"
-                        android:fontFamily="@font/bmhannaair"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:text="팬케이크"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="20dp"
-                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:text="환경 설정"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"/>
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/send"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:background="@color/lightGrey"
-                        android:src="@drawable/pancakes"
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"/>
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_margin="5dp"
-                        android:fontFamily="@font/bmhannaair"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:text="팬케이크"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="20dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:background="@color/lightGrey"
-                        android:src="@drawable/pancakes"
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"/>
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_margin="5dp"
-                        android:fontFamily="@font/bmhannaair"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:text="팬케이크"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
+                    android:layout_height="wrap_content"/>
 
+            </RelativeLayout>
 
-
-            </LinearLayout>
-            <TextView
-                android:fontFamily="@font/bmdohyeon"
-                android:textColor="@color/black"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="다른 추천 레시피"/>
-            <LinearLayout
-                android:layout_marginLeft="20dp"
-                android:layout_gravity="top"
-                android:background="@color/skyBlue"
-                android:layout_width="match_parent"
-                android:layout_height="3dp">
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_margin="20dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:background="@color/lightGrey"
-                        android:src="@drawable/pancakes"
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"/>
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_margin="5dp"
-                        android:fontFamily="@font/bmhannaair"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:text="팬케이크"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="20dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:background="@color/lightGrey"
-                        android:src="@drawable/pancakes"
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"/>
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_margin="5dp"
-                        android:fontFamily="@font/bmhannaair"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:text="팬케이크"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="20dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:background="@color/lightGrey"
-                        android:src="@drawable/pancakes"
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"/>
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_margin="5dp"
-                        android:fontFamily="@font/bmhannaair"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:text="팬케이크"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-            <TextView
-                android:fontFamily="@font/bmdohyeon"
-                android:textColor="@color/black"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="다른 추천 레시피"/>
-            <LinearLayout
-                android:layout_marginLeft="20dp"
-                android:layout_gravity="top"
-                android:background="@color/skyBlue"
-                android:layout_width="match_parent"
-                android:layout_height="3dp">
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_margin="20dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:background="@color/lightGrey"
-                        android:src="@drawable/pancakes"
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"/>
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_margin="5dp"
-                        android:fontFamily="@font/bmhannaair"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:text="팬케이크"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="20dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:background="@color/lightGrey"
-                        android:src="@drawable/pancakes"
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"/>
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_margin="5dp"
-                        android:fontFamily="@font/bmhannaair"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:text="팬케이크"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_margin="20dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-                    <ImageView
-                        android:background="@color/lightGrey"
-                        android:src="@drawable/pancakes"
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"/>
-                    <TextView
-                        android:textColor="@color/black"
-                        android:layout_margin="5dp"
-                        android:fontFamily="@font/bmhannaair"
-                        android:layout_gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:text="팬케이크"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </LinearLayout>
-
-
-
-            </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+    <LinearLayout
+        android:foreground="#80262626"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/test"/>
+
+
+    </LinearLayout>
+
+
+
+
 
 
 </LinearLayout>
