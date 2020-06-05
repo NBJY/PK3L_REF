@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
@@ -40,11 +41,11 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private static final  String[] CHANNELS = new String[]{"장바구니", "냉장고", "레시피"};
     private List<String> mDataList = Arrays.asList(CHANNELS);
-    private ExamplePagerAdapter mExamplePagerAdapter;
     private ViewPager mViewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     final List<String> mTitleDataList = new ArrayList<String>();
+    NewPagerAdapter newPagerAdapter;
     View l;
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mExamplePagerAdapter = new ExamplePagerAdapter(mDataList, getApplicationContext());
+        newPagerAdapter =  new NewPagerAdapter(getSupportFragmentManager());
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
         drawerLayout = (DrawerLayout) findViewById(R.id.draw_layout);
 
@@ -109,8 +110,22 @@ public class MainActivity extends AppCompatActivity {
 
 
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
-        mViewPager.setAdapter(mExamplePagerAdapter);
+        mViewPager.setAdapter(newPagerAdapter);
         mViewPager.setCurrentItem(1);
+        for (int i=0;i<mDataList.size();i++){
+            switch (i){
+                case 0:
+                    FragCART fragCART = new FragCART();
+                    newPagerAdapter.addItem(fragCART);
+                case 1:
+                    FragREF fragREF = new FragREF();
+                    newPagerAdapter.addItem(fragREF);
+                case 2:
+                    FragREC fragREC = new FragREC();
+                    newPagerAdapter.addItem(fragREC);
+            }
+        }
+        newPagerAdapter.notifyDataSetChanged();
 
         MagicIndicator magicIndicator = (MagicIndicator) findViewById(R.id.magic_indicator);
         CommonNavigator commonNavigator = new CommonNavigator(this);
