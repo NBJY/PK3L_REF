@@ -8,7 +8,8 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
     <LinearLayout
-        android:background="@color/backgroundWhite"
+        android:paddingRight="10dp"
+        android:background="@color/classicBlue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -16,309 +17,336 @@
             android:layout_gravity="center_vertical"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/chevron_left"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="닭고기 x"
-            android:layout_margin="10dp"
-            android:textSize="20sp"
-            android:fontFamily="@font/bmhannaair"
-            android:background="@drawable/tag_back"
-            android:padding="10dp"
-            android:textColor="@color/black"/>
+            android:src="@drawable/arrow_back_skyblue"/>
         <EditText
+            android:paddingLeft="20dp"
             android:layout_margin="10dp"
             android:background="@color/backgroundWhite"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:textColorHint="@color/black"
-            android:hint="검색어 추가"
-            />
-        <ImageView
-            android:layout_margin="5dp"
-            android:layout_gravity="center_vertical"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/search"/>
+            android:hint="검색어로 찾기"/>
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/lightGrey"></LinearLayout>
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/circle_question"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="새로 만들기"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/bmhannaair"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:gravity="right"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_question">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/circle_close"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최근 사용함"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/bmhannaair"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:gravity="right"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_question">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/circle_close"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최근 사용함"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/bmhannaair"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:gravity="right"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_question">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/circle_close"
+                    />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최근 사용함"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/bmhannaair"/>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <LinearLayout
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/tag_back"
+        <TextView
+            android:textColor="@color/darkGrey"
+            android:fontFamily="@font/bmeuljiro"
+            android:textSize="25sp"
+            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="추천순"
-                android:textSize="15sp"
-                android:fontFamily="@font/bmhannaair"
-                android:padding="10dp"
-                android:textColor="@color/black"/>
+            android:layout_marginLeft="20dp"
+            android:text="채소 / 과일"/>
+        <ImageView
+            android:layout_marginRight="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/folder_open"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
             <ImageView
-                android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/arrow_down"/>
-        </LinearLayout>
-        <LinearLayout
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/tag_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                android:layout_gravity="center_horizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/apple"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="이름순"
+                android:text="사과"
+                android:textColor="@color/black"
                 android:textSize="15sp"
-                android:fontFamily="@font/bmhannaair"
-                android:padding="10dp"
-                android:textColor="@color/black"/>
+                android:fontFamily="@font/bmhannaair"/>
         </LinearLayout>
         <LinearLayout
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/tag_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="칼로리순"
-                android:textSize="15sp"
-                android:fontFamily="@font/bmhannaair"
-                android:padding="10dp"
-                android:textColor="@color/black"/>
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="center_vertical"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/chicken"/>
-        <LinearLayout
-            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/berry"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="닭가슴살 스테이크"
-                android:textSize="20sp"
-                android:fontFamily="@font/bmhannapro"
-                android:layout_marginLeft="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="닭가슴살, 닭고기 등등 태그"
+                android:text="딸기"
+                android:textColor="@color/black"
                 android:textSize="15sp"
-                android:fontFamily="@font/bmhannaair"
-                android:textColor="@color/lightGrey"
-                android:layout_marginLeft="25dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="그외 설명 영양성분 등"
-                android:textColor="@color/darkGrey"
-                android:textSize="20sp"
-                android:fontFamily="@font/bmhannaair"
-                android:layout_marginLeft="25dp"/>
-
+                android:fontFamily="@font/bmhannaair"/>
         </LinearLayout>
-        <ImageView
-            android:layout_gravity="right"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/star_border"/>
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/lightGrey"></LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="center_vertical"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/chicken"/>
         <LinearLayout
-            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/carrot"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="닭가슴살 스테이크"
-                android:textSize="20sp"
-                android:fontFamily="@font/bmhannapro"
-                android:layout_marginLeft="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="닭가슴살, 닭고기 등등 태그"
+                android:text="당근"
+                android:textColor="@color/black"
                 android:textSize="15sp"
-                android:fontFamily="@font/bmhannaair"
-                android:textColor="@color/lightGrey"
-                android:layout_marginLeft="25dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="그외 설명 영양성분 등"
-                android:textColor="@color/darkGrey"
-                android:textSize="20sp"
-                android:fontFamily="@font/bmhannaair"
-                android:layout_marginLeft="25dp"/>
-
+                android:fontFamily="@font/bmhannaair"/>
         </LinearLayout>
-        <ImageView
-            android:layout_gravity="right"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/star_border"/>
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/lightGrey"></LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="center_vertical"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/chicken"/>
         <LinearLayout
-            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/chilli"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="닭가슴살 스테이크"
-                android:textSize="20sp"
-                android:fontFamily="@font/bmhannapro"
-                android:layout_marginLeft="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="닭가슴살, 닭고기 등등 태그"
+                android:text="풋고추"
+                android:textColor="@color/black"
                 android:textSize="15sp"
-                android:fontFamily="@font/bmhannaair"
-                android:textColor="@color/lightGrey"
-                android:layout_marginLeft="25dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="그외 설명 영양성분 등"
-                android:textColor="@color/darkGrey"
-                android:textSize="20sp"
-                android:fontFamily="@font/bmhannaair"
-                android:layout_marginLeft="25dp"/>
-
+                android:fontFamily="@font/bmhannaair"/>
         </LinearLayout>
-        <ImageView
-            android:layout_gravity="right"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/star_border"/>
 
 
     </LinearLayout>
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/lightGrey"></LinearLayout>
-    <LinearLayout
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:padding="10dp"
         android:orientation="horizontal">
-        <ImageView
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="center_vertical"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/chicken"/>
         <LinearLayout
-            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/garlic"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="닭가슴살 스테이크"
-                android:textSize="20sp"
-                android:fontFamily="@font/bmhannapro"
-                android:layout_marginLeft="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="닭가슴살, 닭고기 등등 태그"
+                android:text="마늘"
+                android:textColor="@color/black"
                 android:textSize="15sp"
-                android:fontFamily="@font/bmhannaair"
-                android:textColor="@color/lightGrey"
-                android:layout_marginLeft="25dp"/>
+                android:fontFamily="@font/bmhannaair"/>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/grape"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="그외 설명 영양성분 등"
-                android:textColor="@color/darkGrey"
-                android:textSize="20sp"
-                android:fontFamily="@font/bmhannaair"
-                android:layout_marginLeft="25dp"/>
+                android:text="포도"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/bmhannaair"/>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/lettuce"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="양배추"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/bmhannaair"/>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_marginRight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/watermelon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수박"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/bmhannaair"/>
+        </LinearLayout>
 
         </LinearLayout>
-        <ImageView
-            android:layout_gravity="right"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/star_border"/>
-
-
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/lightGrey"></LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/darkGrey"
+            android:fontFamily="@font/bmeuljiro"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="생선 / 육류"/>
+        <ImageView
+            android:layout_marginRight="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/folder_close"/>
+
+    </LinearLayout>
+
+
+
+
 
 
 
